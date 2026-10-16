@@ -367,6 +367,20 @@
     "maintenance": {
       "title": "維護"
     },
+    "menu": {
+      "title": "選單設定",
+      "items": {
+        "title": "導覽選單項目",
+        "desc": "管理站點導覽欄選單：編輯名稱與連結、調整順序、顯示或隱藏、新增或刪除選單項目。",
+        "label_placeholder": "名稱",
+        "href_placeholder": "連結，如 /about 或 https://example.com",
+        "move_up": "上移",
+        "move_down": "下移",
+        "add": "新增選單項目",
+        "reset": "還原預設",
+        "empty": "暫無選單項目，點擊下方按鈕新增。"
+      }
+    },
     "friend": {
       "apply": {
         "desc": "允許其他用戶申請友情連結（需審核）",

@@ -18,7 +18,9 @@ import { FeedCardPreview } from "../components/feed-card-preview";
 import { FEED_LAYOUT_OPTIONS, normalizeFeedLayout } from "../components/feed-layout-options";
 import { useSiteConfig } from "../hooks/useSiteConfig";
 import { applyThemeColor, normalizeThemeColor } from "../utils/theme-color";
+import { buildDefaultMenuItems, MENU_CONFIG_KEY, parseMenuItems } from "../components/site-header/menu-options";
 import { AISummarySettings } from "./settings-ai";
+import { MenuSettings } from "./settings-menu";
 import { ItemButton, ItemImageInput, ItemInput, ItemSwitch, ItemTitle, ItemWithUpload } from "./settings-items";
 import {
   areSettingsDraftsEqual,
@@ -99,6 +101,10 @@ export function Settings() {
   const themeColorValue = normalizeThemeColor(String(clientConfig.get("theme.color") ?? "#fc466b"));
   const feedLayoutValue = normalizeFeedLayout(String(clientConfig.get("feed.layout") ?? "list"));
   const feedCardVariantValue = normalizeFeedCardVariant(String(clientConfig.get("feed.card_variant") ?? "default"));
+  const menuItems = useMemo(
+    () => parseMenuItems(draft.clientConfig[MENU_CONFIG_KEY]) ?? buildDefaultMenuItems(t),
+    [draft.clientConfig[MENU_CONFIG_KEY], t],
+  );
   const previewSiteName = String(clientConfig.get("site.name") ?? clientConfig.default("site.name") ?? "Rin");
   const previewSiteAvatar = String(clientConfig.get("site.avatar") ?? clientConfig.default("site.avatar") ?? "");
 
@@ -422,6 +428,14 @@ export function Settings() {
               </div>
             </SettingsCard>
           </div>
+
+          <ItemTitle title={t("settings.menu.title")} />
+          <MenuSettings
+            value={menuItems}
+            onChange={(items) => {
+              setConfigValue("client", MENU_CONFIG_KEY, items === null ? "" : JSON.stringify(items));
+            }}
+          />
 
           <ItemTitle title={t("settings.other.title")} />
           <ItemSwitch
