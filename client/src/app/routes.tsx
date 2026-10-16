@@ -14,6 +14,7 @@ import { CallbackPage } from "../page/callback";
 import { CompatTasksPage } from "../page/compat-tasks";
 import { ErrorPage } from "../page/error";
 import { FeedPage, TOCHeader } from "../page/feed";
+import { FeedManagePage } from "../page/feed-manage";
 import { FeedsPage } from "../page/feeds";
 import { FriendsPage } from "../page/friends";
 import { HealthPage } from "../page/health";
@@ -86,6 +87,10 @@ export function AppRoutes() {
 
       <AdminRoute path="/admin/writing/:id" requirePermission title={t("writing")} description={t("admin.writing_description")}>
         {({ id }) => <WritingPage id={tryInt(0, id)} />}
+      </AdminRoute>
+
+      <AdminRoute path="/admin/feeds" requirePermission title={t("feeds_manage.title")} description={t("admin.feeds_description")}>
+        <FeedManagePage />
       </AdminRoute>
 
       <AppRoute path="/callback">
