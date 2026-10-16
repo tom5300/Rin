@@ -10,7 +10,18 @@
     "queue_status_description": "Inspect AI summary queue progress, recent task results, and failures.",
     "settings_description": "Manage site behavior, integrations, and publishing rules in one place.",
     "title": "Admin",
-    "writing_description": "Write, edit, and publish content from the private management workspace."
+    "writing_description": "Write, edit, and publish content from the private management workspace.",
+    "feeds_description": "List, view, edit, and delete articles, including published, unlisted, and drafts."
+  },
+  "feeds_manage": {
+    "title": "Articles",
+    "published": "Published",
+    "view": "View",
+    "untitled": "Untitled article",
+    "loading": "Loading articles...",
+    "load_failed": "Failed to load articles",
+    "empty_title": "No articles",
+    "empty_description": "Articles in this category will show up here."
   },
   "compat_tasks": {
     "title": "Compatibility Tasks",
