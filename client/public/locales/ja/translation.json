@@ -10,7 +10,18 @@
     "queue_status_description": "AI 要約キューの進行状況、最近のタスク結果、失敗内容を確認します。",
     "settings_description": "サイトの挙動、連携設定、公開ルールを一か所で管理します。",
     "title": "管理画面",
-    "writing_description": "非公開の管理ワークスペースから記事を作成、編集、公開します。"
+    "writing_description": "非公開の管理ワークスペースから記事を作成、編集、公開します。",
+    "feeds_description": "公開済み・非公開・下書きの記事を一覧表示し、編集や削除を行います。"
+  },
+  "feeds_manage": {
+    "title": "記事管理",
+    "published": "公開中",
+    "view": "表示",
+    "untitled": "無題の記事",
+    "loading": "記事を読み込み中...",
+    "load_failed": "記事の読み込みに失敗しました",
+    "empty_title": "記事がありません",
+    "empty_description": "このカテゴリーの記事がここに表示されます。"
   },
   "compat_tasks": {
     "title": "互換タスク",
