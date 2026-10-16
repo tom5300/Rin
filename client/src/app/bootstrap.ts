@@ -21,11 +21,16 @@ export function bootstrapApp() {
       backend: {
         loadPath: "/locales/{{lng}}/{{ns}}.json",
       },
-      fallbackLng: "zh-CN",
-      interpolation: {
-        escapeValue: false,
-      },
-    });
+  fallbackLng: "zh-CN",                      // ① 默认语言从 en 改为 zh-CN
+  supportedLngs: ["en", "zh-CN", "zh-TW", "ja"],  // ② 声明支持的语言
+  detection: {                                // ③ 只认 querystring 和 localStorage，
+     order: ["querystring", "localStorage"],    //    不再跟随浏览器语言
+     caches: ["localStorage"],
+   },
+   interpolation: {
+      escapeValue: false,
+     },
+   });
 
   bootstrapped = true;
 }
