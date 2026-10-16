@@ -57,6 +57,9 @@ export interface FeedListResponse {
     updatedAt: string;
     pv: number;
     uv: number;
+    draft?: number;
+    listed?: number;
+    alias?: string | null;
   }>;
   hasNext: boolean;
 }
