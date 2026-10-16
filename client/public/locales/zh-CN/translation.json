@@ -367,6 +367,20 @@
     "maintenance": {
       "title": "维护"
     },
+    "menu": {
+      "title": "菜单设置",
+      "items": {
+        "title": "导航菜单项",
+        "desc": "管理站点导航栏菜单：编辑名称与链接、调整顺序、显示或隐藏、添加或删除菜单项。",
+        "label_placeholder": "名称",
+        "href_placeholder": "链接，如 /about 或 https://example.com",
+        "move_up": "上移",
+        "move_down": "下移",
+        "add": "添加菜单项",
+        "reset": "恢复默认",
+        "empty": "暂无菜单项，点击下方按钮添加。"
+      }
+    },
     "friend": {
       "apply": {
         "desc": "允许其他用户申请友链（需审核）",

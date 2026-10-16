@@ -367,6 +367,20 @@
     "maintenance": {
       "title": "Maintenance"
     },
+    "menu": {
+      "title": "Menu",
+      "items": {
+        "title": "Navigation menu items",
+        "desc": "Manage the site navigation bar: edit labels and links, reorder, show or hide, add or remove items.",
+        "label_placeholder": "Label",
+        "href_placeholder": "Path, e.g. /about or https://example.com",
+        "move_up": "Move up",
+        "move_down": "Move down",
+        "add": "Add menu item",
+        "reset": "Restore defaults",
+        "empty": "No menu items yet. Add one below."
+      }
+    },
     "friend": {
       "apply": {
         "desc": "Allow other users to apply for friend links (requires review)",
